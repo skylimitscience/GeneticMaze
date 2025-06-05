@@ -17,7 +17,7 @@ Once agents have finished their route, we calculate a fitness score using a self
 - (dist + loopbacks + collisions)
 ```
 or in the case of the actual code:
-##### [agent.py](https://github.com/skylimitscience/GeneticMaze/blob/main/agent.py)
+###### [agent.py](https://github.com/skylimitscience/GeneticMaze/blob/main/agent.py)
 ```python
 self.fitness = (2*settings.N - dist) - self.loops * 2 - self.hits
 ```
@@ -26,7 +26,7 @@ We ultimately want less of all three, hence the negative sign. Given the fitness
 ### Reproduction
 Finally, to breed any two agents from our top pool, we use a single-point crossover of their DNA sequences by choosing a random pivot point and assigning the offspring with a DNA that merges the left half of parent 1 and right half of parent 2. Because maze-solving move sequences are order-sensitive, we don't want to choose a crossover method that breaks apart the sequence into too many pieces, hence just single-point. We also introduce mutations in DNA every once in a while (e.g 2% of the time), swapping out one direction for another, to promote genetic diversity (which is crucial in the evolutionary process).
 
-##### [agent.py](https://github.com/skylimitscience/GeneticMaze/blob/main/agent.py)
+###### [agent.py](https://github.com/skylimitscience/GeneticMaze/blob/main/agent.py)
 ```python
 def breed(ag1, ag2):
   #Crossover DNA
@@ -44,7 +44,7 @@ def breed(ag1, ag2):
 ## Customization
 If you're up for it, I highly encourage tinkering with the numbers in this project! You can change up most of the genetic conditions through the settings.py file and alter the fitness and breeding methods in the agent.py file, as outlined above.
 
-##### [settings.py](https://github.com/skylimitscience/GeneticMaze/blob/main/settings.py)
+###### [settings.py](https://github.com/skylimitscience/GeneticMaze/blob/main/settings.py)
 ```python
 SQUARE_SIZE = 25 #Pixel size of the square image
 N = 15 #NxN maze size (must be odd number)
