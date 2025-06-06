@@ -1,6 +1,6 @@
 # Genetic Maze
 Python maze-solver that trains tiny agents to escape using DNA and evolution.
-YouTube video: 
+YouTube video: https://youtu.be/2JxA-mWQLdM
 
 ## Overview
 The genetic algorithm employed in this project operates on three basic steps:
